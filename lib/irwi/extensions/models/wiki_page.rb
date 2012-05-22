@@ -10,6 +10,10 @@ module Irwi::Extensions::Models::WikiPage
 
   module InstanceMethods
 
+    def toppage?
+      path == ''
+    end
+
     # Retrieve number of last version
     def last_version_number
       last = versions.first
